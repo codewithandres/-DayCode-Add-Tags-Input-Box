@@ -1,34 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&display=swap');
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: "Noto Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-
-    min-height: 100vh;
-    background-color: hsl(223, 23%, 94%);
-
     display: flex;
     align-items: center;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
+    min-height: 100vh;
+    background: hsl(227, 31%, 6%);
+    color: hsl(0, 0%, 84%);
+}
+
+::selection {
+    color: #fff;
+    background: #5372F0;
 }
 
 .wrapper {
-    width: 490px;
+    width: 496px;
+    background: hsl(240, 36%, 5%);
     border-radius: 10px;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-    background-color: hsl(0, 0%, 100%);
-    padding: 18px 20px 25px;
+    padding: 18px 25px 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.06);
 }
 
 .wrapper :where(.title, li, li i, .details) {
@@ -36,68 +35,63 @@ body {
     align-items: center;
 }
 
+.title img {
+    max-width: 21px;
+}
+
 .title h2 {
-    font-size: 2rem;
-    font-weight: 500;
-    color: hsl(0, 33%, 4%);
-}
-
-.wrapper .title {
-    display: flex;
-    align-items: center;
-    gap: .2rem;
-}
-
-.wrapper .title i {
-    font-size: 2.2rem;
-    transform: rotate(-80deg) translateX(-4px);
+    font-size: 21px;
+    font-weight: 600;
+    margin-left: 8px;
 }
 
 .wrapper .content {
     margin: 10px 0;
 }
 
-.wrapper .content {
+.content p {
     font-size: 15px;
-    font-weight: 500;
 }
 
 .content ul {
-    width: 100%;
-    display: flex;
-    list-style: none;
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid #a6a6a6;
-    padding: 10px;
-    border-radius: 8px;
+    padding: 7px;
+    margin: 12px 0;
+    border-radius: 5px;
+    border: 1px solid #01010c;
 }
 
 .content ul li {
+    color: #c2c2c2;
     margin: 4px 3px;
-    background-color: #f2f2f2;
-    padding: 5px 8px 5px 10px;
+    list-style: none;
     border-radius: 5px;
-    border: 1px solid #e3d1e1;
+    background: #18171a;
+    padding: 5px 8px 5px 10px;
+    border: 1px solid #0d0f2c;
 }
 
 .content ul li i {
     height: 20px;
     width: 20px;
-    font-size: 12px;
-    border-radius: 5px;
+    color: #252222;
     margin-left: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #848486;
     justify-content: center;
-    background-color: #dfdfdf;
-    color: #080808;
 }
 
 .content ul input {
     flex: 1;
     padding: 5px;
-    font-size: 18px;
-    outline: none;
     border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: transparent;
+    color: white;
 }
 
 .wrapper .details {
@@ -107,10 +101,15 @@ body {
 .details button {
     border: none;
     outline: none;
-    color: hsl(0, 0%, 100%);
-    padding: 9px 15px;
-    background-color: hsl(219, 100%, 50%);
-    font-family: inherit;
-    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
     cursor: pointer;
+    padding: 9px 15px;
+    border-radius: 5px;
+    background: hsl(219, 98%, 44%);
+    transition: background 0.3s ease;
+}
+
+.details button:hover {
+    background: hsl(224, 91%, 47%);
 }
