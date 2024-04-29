@@ -7,6 +7,7 @@ let tags = [];
 const createTag = () => {
 
     [...ul.querySelectorAll('li')].every(li => li.remove());
+
     console.log(tags.slice().reverse());
     tags.slice().reverse().some(tag => {
         let liTag = `  <li>${tag} <i class="ri-close-fill"></i></li> `;
